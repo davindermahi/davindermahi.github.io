@@ -6,52 +6,121 @@
     <title>DPSingh - Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif; /* Modern font (Google Fonts) */
             margin: 0;
             padding: 0;
             line-height: 1.6;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        nav {
-            background-color: #f4f4f4;
-            padding: 1rem;
-        }
-        nav a {
-            margin: 0 1rem;
-            text-decoration: none;
+            background-color: #f9f9f9; /* Light background for contrast */
             color: #333;
         }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db); /* Gradient background */
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        nav {
+            background-color: #fff; /* Clean white nav */
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            margin: 0 1.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #3498db; /* Hover effect */
+        }
         .container {
-            width: 80%;
+            width: 85%;
+            max-width: 1200px; /* Limit max width for larger screens */
             margin: auto;
-            padding: 2rem;
+            padding: 3rem 1rem;
         }
         .section {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 0.3rem;
         }
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         .project-card {
-            border: 1px solid #ddd;
-            padding: 1rem;
-            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .project-card a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
         }
         footer {
-            background-color: #333;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
             text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 1.5rem;
+            /* Removed fixed positioning for a cleaner flow */
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            nav a {
+                margin: 0 0.8rem;
+            }
+            .container {
+                width: 90%;
+            }
+            .project-grid {
+                grid-template-columns: 1fr; /* Stack cards on small screens */
+            }
         }
     </style>
 </head>
